@@ -44,3 +44,18 @@ function showMessage(message) {
 function clearResults() {
     list.innerHTML = '';
 }
+
+function getExistingCity(searchValue) {
+    const listItems = Array.from(list.querySelectorAll('.cities li'));
+    return listItems.find((item) => {
+      const cityName = item.querySelector('.city__name').textContent.toLowerCase();
+      const cityCountry = item.querySelector('.city__country').textContent.toLowerCase();
+      const [inputCity, inputCountry] = searchValue.toLowerCase().split(',');
+  
+      if (inputCountry) {
+        return cityName === inputCity && cityCountry === inputCountry;
+      } else {
+        return cityName === inputCity;
+      }
+    });
+}
