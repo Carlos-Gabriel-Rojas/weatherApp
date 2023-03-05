@@ -34,4 +34,10 @@ form.addEventListener('submit', async (e) => {
     } catch (error) {
       showMessage('Failed to fetch weather data. Please try again.');
     }
-  });
+});
+
+function showMessage(message) {
+    msg.textContent = message;
+    msg.classList.add('visible');
+}
+  
