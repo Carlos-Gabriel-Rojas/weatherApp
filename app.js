@@ -41,3 +41,6 @@ function showMessage(message) {
     msg.classList.add('visible');
 }
   
+function clearResults() {
+    list.innerHTML = '';
+}
