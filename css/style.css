@@ -1,0 +1,20 @@
+:root {
+	--body-font: 'Figtree', sans-serif;
+	
+	--primary: #F5F8FA;
+	--secondary: #90A4AE;
+	--tertiary: #FFCC80;
+	
+	--text-primary: #212121;
+	--text-secondary: #546E7A;
+	
+	--form-bg: #E0E5EC;
+	--input-bg: #CFD8E3;
+	--input-placeholder: #90A4AE;
+	
+	--city-bg: #FFFFFF;
+	--city-shadow: rgba(0, 0, 0, 0.1);
+
+	--global-border-radius: 4px;
+	--global-transition: all .2s ease-in-out;
+}
