@@ -70,4 +70,30 @@ async function getWeatherData(city) {
     } else {
       throw new Error(`${data.cod}, ${data.message}`);
     }
-  }
+}
+
+function displayWeatherData(data) {
+    const { main, name, sys, weather } = data;
+    const icon = `img/weather/${weather[0]['icon']}.svg`;
+  
+    const li = document.createElement('li');
+  
+    const markup = `
+      <figure>
+        <img src="${icon}" alt="${weather[0]['description']}">
+      </figure>
+  
+      <div>
+        <h2>${Math.round(main.temp)}<sup>°C</sup></h2>
+        <p class="city__conditions">${weather[0]['description'].toUpperCase()}</p>
+        <h3>
+          <span class="city__name">${name}</span>
+          <span class="city__country">${sys.country}</span>
+        </h3>
+      </div>
+    `;
+  
+    li.innerHTML = markup;
+    list.appendChild(li);
+    msg.classList.remove('visible');
+}
