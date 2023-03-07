@@ -18,3 +18,29 @@
 	--global-border-radius: 4px;
 	--global-transition: all .2s ease-in-out;
 }
+
+/* GENERAL STYLES */
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: var(--body-font);
+    background-color: var(--primary);
+    color: var(--text-primary);
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	padding: 4rem 2rem;
+}
