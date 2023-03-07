@@ -85,3 +85,86 @@ a {
 a:hover {
 	color: var(--p-tint-90);
 }
+
+/* FORM */
+
+form {
+	width: 100%;
+	margin-bottom: 2rem;
+	max-width: 30rem;
+}
+
+label {
+	margin-bottom: .5rem;
+	display: block;
+}
+
+input {
+	border-radius: 20px;
+	border: 0;
+}
+
+input[type="text"] {
+	height: 2.75rem;
+	background: var(--input-bg) url('img/search.svg') .75rem center no-repeat;
+	color: var(--text-primary);
+	padding-left: 2.25rem;
+	flex-grow: 1;
+	outline: none;
+	transition: var(--global-transition);
+}
+
+input::placeholder {
+	color: var(--input-placeholder);
+}
+
+input:focus,
+input:hover {
+	border: 2px solid #90A4AE;
+  
+  transition: border-color .3s ease-in-out;
+}
+
+form button {
+	height: 2.75rem;
+	width: 2.75rem;
+	background-color: var(--secondary);
+	border: none;
+	border-radius: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: var(--global-transition);
+	cursor: pointer;
+}
+
+form button:hover {
+	background-color: var(--input-bg);
+}
+
+form button:active {
+	background-color: var(--p-shade-50);
+}
+
+.form-msg {
+	background-color: var(--form-bg);
+	padding: .5rem 1rem;
+	border-radius: 0 0 var(--global-border-radius) var(--global-border-radius);
+	width: 75%;
+	margin-left: .75rem;
+	transform: translate3d(0, -100%, 0);
+	opacity: 0;
+	transition: var(--global-transition);
+	position: relative;
+	z-index: -1;
+}
+
+.form-msg.visible {
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
+}
+
+.form-row {
+	display: flex;
+	gap: .5rem;
+}
